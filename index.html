@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080d1b"><title>NEAR — Neon Glass</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="glow g1"></div><div class="glow g2"></div>
+<div class="app">
+<aside class="sidebar glass"><div class="brand"><div class="logo">✦</div><div><b>NEAR</b><small>YOUR SPACE, YOUR PEOPLE</small></div></div>
+<div class="userbox"><div class="avatar" id="myAvatar">N</div><div><b id="myName">Гость</b><small id="myEmail">Войди в аккаунт</small></div><button id="logout" class="tiny hidden">Выйти</button></div>
+<div class="navtitle">МЕНЮ</div><button class="nav active">▣　Сообщения</button><button class="nav" id="contactsTab">♧　Найти пользователя</button>
+<div class="sidebottom"><span class="dot"></span> Онлайн-сервис NEAR</div></aside>
+<main class="main">
+<header class="top glass"><div><small>ПРОСТРАНСТВО NEAR</small><h1>Сообщения<span>.</span></h1></div><div class="secure">✦ Защищённое соединение</div></header>
+<section class="layout">
+<div class="list glass"><div class="listhead"><div><h2>Диалоги</h2><p>Твои переписки</p></div><button id="refresh" class="plus">↻</button></div><div id="dialogs" class="dialogs"><div class="empty">Войди, чтобы увидеть диалоги</div></div></div>
+<div class="chat glass"><div class="chathead"><div class="avatar" id="peerAvatar">?</div><div><b id="peerName">Выбери диалог</b><small id="peerStatus">Сообщения и фотографии</small></div></div>
+<div id="messages" class="messages"><div class="welcome"><div class="biglogo">✦</div><h2>Твой NEAR начинается здесь</h2><p>Войди или создай аккаунт, чтобы общаться с другими пользователями.</p></div></div>
+<form id="sendForm" class="composer"><label class="attach" title="Прикрепить фото">＋<input id="photo" type="file" accept="image/*" hidden></label><input id="message" placeholder="Написать сообщение..." autocomplete="off" disabled><button id="send" disabled>➤</button></form><div class="hint">Фото и сообщения отправляются выбранному пользователю</div></div>
+</section><footer>NEAR <span>•</span> NEON GLASS <small>Онлайн-мессенджер</small></footer>
+</main></div>
+<div id="authModal" class="modal"><form id="authForm" class="auth glass"><div class="logo large">✦</div><h2 id="authTitle">Добро пожаловать в NEAR</h2><p>Создай аккаунт или войди, чтобы начать общение.</p><input id="email" type="email" placeholder="Электронная почта" required><input id="password" type="password" placeholder="Пароль (минимум 6 символов)" minlength="6" required><input id="username" placeholder="Имя пользователя (для регистрации)"><div class="authbuttons"><button type="submit" id="authSubmit">Войти</button><button type="button" id="toggleAuth" class="secondary">Создать аккаунт</button></div><small id="authInfo">Используй свою почту. Никому не сообщай пароль.</small></form></div>
+<div id="userModal" class="modal hidden"><form id="userForm" class="auth glass"><button type="button" class="close" id="closeUser">×</button><h2>Найти пользователя</h2><p>Введи точное имя пользователя NEAR.</p><input id="findUsername" placeholder="Например, matvey123" required><button type="submit">Найти и открыть чат</button><small id="findInfo"></small></form></div>
+<div id="toast" class="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="app.js"></script></body></html>
